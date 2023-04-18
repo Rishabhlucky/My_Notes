@@ -1,13 +1,102 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+max-width: 960px;
+margin: 20px auto;
+padding-right: 15px;
+padding-left: 15px;
+min-height: 100vh;
+}
+.Note-list{
+display: grid;
+grid-gap: 1rem;
+grid-template-columns: repeat(auto-fill ,minmax(250px ,1fr));
+}
+.note{
+  background-color: #67d7cc;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  min-height: 170px;
+  border: 1px solid blueviolet;
+  padding: 10px;
+  margin: 5px 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.delte-icon:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.delte-icon:hover::before{
+  content: 'delete';
+  width: 100px;
+}
+.new{
+  background-color: #fef68a;
+}
+textarea {
+  border: none;
+  resize: none;
+  background-color: #fef68a;
+}
+textarea:focus {
+  outline: none;
+}
+textarea::placeholder{
+  color: black;
+  font-size: 18px;
+}
+.save{
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 7px 15px;
+  font-weight: 600;
+}
+.save:hover{
+cursor: pointer;
+background-color: #ededed;
+}
+.serach {
+  display: flex;
+  align-items: center;
+  background-color:rgb(233,233,233);
+  border-radius: 10px;
+  padding: 6px;
+  margin-bottom: 20px;
+}
+.serach input{
+  border: none;
+  background-color: rgb(233,233,233);
+  margin-left: 5px;
+}
+.serach input:focus{
+  outline: none;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.header .save{
+  font-size: 16px;
+}
+.dark-mood{
+  background-color: black;
+}
+.dark-mood h1{
+  color: white;
 }

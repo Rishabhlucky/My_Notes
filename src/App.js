@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import NotesList from "./Components/NotesList";
 
-function App() {
+const App = ()=>{
+  const [toggleMood ,setToggleMood] =useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${toggleMood && 'dark-mood'}`}>
+    <div className="container">
+     <NotesList handleMood={setToggleMood}/>
     </div>
-  );
+    </div>
+  )
 }
 
 export default App;
